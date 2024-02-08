@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html>
+    <head> 
+        <title>HealthEatsOnABudge</title> 
+<style> 
+    body {
+                font-family: A, sans-ser; 
+                background-color: rgb(154, 212, 154) ;
+                margin: 0;
+                padding: 0;
+            }
+    header {
+        background-color: darkgreen;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header a {
+        color: white;
+        margin-right: 10px;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    header a:hover {
+        color: #f0f0f0;
+    }
+    h1 {
+        color: #f0f0f0;
+        margin: 0;
+    } 
+    select { 
+        width: 200px; 
+        height: 30px; 
+        font-size: 16px; 
+    } 
+    button { 
+        background-color: #2e7d32; 
+        color: white; 
+        border: none; 
+        padding: 10px 20px; 
+        font-size: 16px; 
+        cursor: pointer; 
+    } 
+    button:hover { 
+        background-color: #1b5e20; 
+    } 
+    article { 
+        background-color: #f0f0f0; 
+        padding: 20px; 
+        margin: 20px 0; 
+    } 
+    footer { 
+        background-color: #2e7d32; 
+        padding: 20px; 
+        text-align: center; 
+    }
+    .user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.user-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style> 
+</head> 
+
+<body> 
+<header>
+        <div class="user-photo">
+            <a href="profile.html"><img src="user-photo.jpg" alt="User Photo"></a>
+        </div>
+        
+        <a href="index.html"><h1>HealthEatsOnABudge</h1></a>
+        <a href="recipeGenerator.html">Generate Recipe</a>
+        <a href="recipes.html">Search Recipes</a>
+        <a href="upgrade.html">Upgrade</a>
+</header>
+    
+    <section> <h2>Select Ingredients</h2> <form> <label for="ingredient1">Ingredient 1:</label> <select id="ingredient1" name="ingredient1"> <option value="">Select an ingredient</option> <option value="paneer">Paneer</option> <option value="Potato">Potato</option> <option value="Egg">Egg</option><option value="tofu">Tofu</option> </select><br><br> <label for="ingredient2">Ingredient 2:</label> <select id="ingredient2" name="ingredient2"> <option value="">Select an ingredient</option> <option value="broccoli">Broccoli</option> <option value="carrots">Carrots</option> <option value="spinach">Spinach</option> <option value="peppers">Peppers</option> <option value="onions">Onions</option> </select><br><br> <label for="ingredient3">Ingredient 3:</label> <select id="ingredient3" name="ingredient3"> <option value="">Select an ingredient</option> <option value="rice">Rice</option> <option value="pasta">Pasta</option> <option value="roti">Roti</option> <option value="potatoes">Potatoes</option> <option value="corn">Corn</option> </select><br><br> <button type="button" onclick="generateRecipe()">Generate Recipe</button> </form> </section> <section id="recipe"> <h2>Recipe</h2> <p> -- Recipe will be generated here --  </p> <footer> <p>&copy; 2023 HealthEatsOnABudge</p> </footer> <script> function generateRecipe() { // Get the selected ingredients 
+var ingredient1 = document.getElementById("ingredient1").value; var ingredient2 = document.getElementById("ingredient2").value; var ingredient3 = document.getElementById("ingredient3").value;
+// Generate the recipe based on the selected ingredients 
+var recipe = ""; if (ingredient1 == "paneer" && ingredient2 == "broccoli" && ingredient3 == "rice") { recipe = "paneer and Broccoli Stir-Fry with Rice:<br><br>" + "1. Heat some oil in a pan and add diced paneer. Cook until browned.<br>" + "2. Add broccoli florets and cook until tender.<br>" + "3. Stir in cooked rice and soy sauce. Serve hot."; }
+else { recipe = "No recipe found for the selected ingredients. Please try again."; }
+
+// Display the recipe 
+document.getElementById("recipe").innerHTML = recipe; } </script>
+
+</body> </html>

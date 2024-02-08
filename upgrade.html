@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>HealthEatsOnABudge</title> 
+        
+<style> 
+
+body {
+                font-family: A, sans-ser; 
+                background-color: rgb(154, 212, 154) ;
+                margin: 0;
+                padding: 0;
+            }
+    header {
+        background-color: darkgreen;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    header a {
+        color: white;
+        margin-right: 10px;
+        text-decoration: none;
+        font-size: 24px;
+    }
+    header a:hover {
+        color: #f0f0f0;
+    }
+    h1 {
+        color: #f0f0f0;
+        margin: 0;
+    } 
+    section { 
+        padding: 20px; 
+    } 
+    .container { 
+        display: flex; 
+    } 
+    .box { 
+        background-color: #f0f0f0; 
+        border: 1px solid #ccc; 
+        border-radius: 10px; 
+        padding: 20px; 
+        margin-right: 20px; 
+    } 
+    .box:last-child { 
+        margin-right: 0; 
+    } 
+    .box:nth-child(2) { 
+        background-color: #f0f0f0; 
+    } 
+    h2 { 
+        font-size: 24px; 
+    } 
+    p { 
+        font-size: 16px; 
+    } 
+    .button 
+    { 
+        background-color: #2e7d32; 
+        color: white; 
+        border: none; 
+        border-radius: 10px; 
+        padding: 10px 20px; 
+        text-decoration: none; 
+        text-align: center; 
+        display: inline-block; 
+        font-size: 16px; 
+        margin: 4px 2px; 
+        cursor: pointer; 
+    } 
+    .button:hover {
+        background-color: #1a5320; 
+    } 
+    footer { 
+        background-color: #2e7d32; 
+        padding: 20px; 
+        text-align: center; 
+    } 
+    .user-photo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-left: 10px;
+    }
+    .user-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style> 
+</head> 
+
+<body> 
+    <header> 
+
+        <div class="user-photo">
+            <a href="profile.html"><img src="user-photo.jpg" alt="User Photo"></a>
+        </div>
+
+        <a href="index.html"><h1>HealthEatsOnABudge</h1> </a> 
+        <a href="recipeGenerator.html">Generate Recipe</a> 
+        <a href="recipes.html">Search Recipes</a> 
+        <a href="">Upgrade</a> 
+        
+    </header> 
+    
+    <section> 
+        <h2>Choose a Plan</h2> 
+        <div class="container"> 
+            <div class="box"> 
+                <h2>Premium</h2> 
+                <p>
+                    Get access to exclusive recipes, meal plans, and discounts on healthy food products. 
+                </p> 
+                <p>
+                    Price: <strong>₹ 299</strong></p> 
+                    <button class="button">Upgrade to Premium</button> 
+            </div> 
+            <div class="box"> 
+                <h2>Premium Plus</h2> 
+                <p>
+                    Get all the benefits of Premium, plus personalized nutrition coaching and priority support.
+                </p> 
+                <p>
+                    Price: <strong>₹ 499</strong></p> 
+                    <button class="button">Upgrade to Premium Plus</button> 
+                </div> 
+        </div> 
+    </section> 
+    
+    <footer> 
+        <p>&copy; 2023 HealthEatsOnABudge</p> 
+    </footer> 
+</body> 
+</html> 

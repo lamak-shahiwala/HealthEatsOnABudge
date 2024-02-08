@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Profile</title>
+	<style>
+		body {
+                font-family: A, sans-ser; 
+                background-color: rgb(154, 212, 154) ;
+                margin: 0;
+                padding: 0;
+            }
+header {
+    background-color: darkgreen;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a {
+    color: white;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 24px;
+}
+header a:hover {
+    color: #f0f0f0;
+}
+h1 {
+    color: #f0f0f0;
+    margin: 0;
+} 
+		.user-photo {
+			float: right;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			overflow: hidden;
+			margin-top: 27px;
+		}
+		.user-photo img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		.user-info {
+			margin-left: 120px;
+			margin-top: 20px;
+		}
+		.user-info h2 {
+			margin-top: 0;
+		}
+		.user-settings {
+			margin-top: 30px;
+		}
+		.user-settings a {
+			display: block;
+			background-color: #2e7d32;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+			margin-bottom: 10px;
+		}
+		.user-settings a:hover {
+			background-color: #1b5e20;
+		}
+        footer { 
+        background-color: #2e7d32; 
+        padding: 20px; 
+        text-align: center; 
+    }
+	</style>
+</head>
+<body>
+	<header>
+        <div class="user-photo">
+            <a href="profile.html"><img src="user-photo.jpg" alt="User Photo"></a>
+        </div>
+        
+        <a href="index.html"><h1>HealthEatsOnABudge</h1></a>
+        <a href="recipeGenerator.html">Generate Recipe</a>
+        <a href="recipes.html">Search Recipes</a>
+        <a href="upgrade.html">Upgrade</a> 
+    </header>
+	<div class="user-info">
+		<h2>User</h2>
+		<p>Weight: NA</p>
+		<p>Height: NA</p>
+		<p>Calories Intake: NA</p>
+		<p>Gender: NA</p>
+		<p>Mobile: NA</p>
+		<p>Email: NA</p>
+		<p>Plan: Free</p>
+	</div>
+	<div class="user-settings">
+		<a href="">Settings</a>
+		<a href="login.html">Logout</a>
+	</div>
+	<footer>
+		<p>&copy; 2023 HealthEatsOnABudge by Lamak</p>
+	</footer>
+</body>
+</html>
+	

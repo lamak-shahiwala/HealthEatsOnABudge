@@ -1,0 +1,137 @@
+<!DOCTYPE html><html><head>
+    <title>HealthEatsABudge</title>
+    <style>
+            body {
+                font-family: A, sans-ser; 
+                background-color: rgb(154, 212, 154) ;
+                margin: 0;
+                padding: 0;
+            }
+            header {
+                background-color: darkgreen;
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            header a {
+                color: white;
+                margin-right: 10px;
+                text-decoration: none;
+                font-size: 24px;
+            }
+            header a:hover {
+                color: #f0f0f0;
+            }
+            h1 {
+                color: #f0f0f0;
+                margin: 0;
+            }
+            section {
+                padding: 20px;
+                background-color: rgb(154, 212, 154) ;
+                border-top: 1px solid #ddd;
+                margin: 0;
+            }
+            input[type="text"] {
+                width: 300px;
+                height: 30px;
+                font-size: 16px;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            button {
+                background-color: #2e7d32;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-left: 10px;
+            }
+            button:hover {
+                background-color: #1a5320;
+            }
+            article {
+                background-color: #f0f0f0;
+                padding: 20px;
+                margin: 20px 0;
+                border-radius: 5px;
+            }
+            footer {
+                background-color: #2e7d32;
+                padding: 20px;
+                text-align: center;
+                margin-top: 20px;
+            }
+            .user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.user-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="user-photo">
+                <a href="profile.html"><img src="user-photo.jpg" alt="User Photo"></a>
+            </div>
+            
+            <a href="index.html"><h1>HealthEatsOnABudge</h1></a>
+            <a href="recipeGenerator.html">Generate Recipe</a>
+            <a href="recipes.html">Search Recipes</a>
+            <a href="upgrade.html">Upgrade</a>
+        
+        
+    </header>
+        <section>
+            <h2>Search Recipes</h2>
+            <form>
+                <label for="search">Enter Food (Egg, Paneer, Tofu, Potato etc):</label><br>
+                <input type="text" id="search" name="search"><br><br>
+                <label for="budget">Budget:</label><br>
+                <select id="budget" name="budget">
+                    <option value="">Select a budget</option>
+                    <option value="50">50 Rupees</option>
+                    <option value="100">100 Rupees</option>
+                    <option value="200">200 Rupees</option>
+                    <option value="300">300 Rupees</option>
+                    <option value="500">500 Rupees</option>
+                </select><br><br>
+                <button type="button" onclick="searchRecipes()">Search Recipes</button>
+            </form>
+        </section>
+        <section id="recipes">
+            <h2>Recipes</h2>
+            <article>
+                <ul id="recipeList">
+                    <!-- Recipes will be generated here -->
+                </ul>
+            </article>
+        </section>
+        <footer>
+            <p>&copy; 2023 HealthEatsOnABudge</p>
+        </footer>
+        <script>
+            function searchRecipes() {
+                // Get the search query and budget
+                var search = document.getElementById("search").value;
+                var budget = document.getElementById("budget").value;
+                var recipes = "";
+                if (search == "egg" || search == "Egg" && budget == "100" || budget == "50" || budget == "200"|| budget == "300" || budget == "500") { recipes = "Omelette Fry with Rice and Pepper:<br><br>" + "1. Get a Pan pour 1 tb ghee <br>2. break the eggs add vegetables of your choice<br>3. fry until full cooked<br>"; }
+else { recipes = "No recipe found for the selected ingredients. Please try again."; }
+                // Display the recipes
+                document.getElementById("recipeList").innerHTML = recipes;
+            }
+        </script>
+    </body>
+    </html>
